@@ -75,6 +75,7 @@ export const CityImageCenteringContainer = styled.div`
     align-items: center;
     border: 1px solid red;
     height: 100vh;
+    background-attachment: fixed;
 `
 
 

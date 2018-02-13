@@ -15,6 +15,7 @@ export const LogoImage = styled.img`
 export const CityShowImage = styled.img`
     width: 45vw;
     margin-left: 100px;
+    background-attachment: fixed;
     
 `
 
