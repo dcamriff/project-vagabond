@@ -12,5 +12,12 @@ export const LogoImage = styled.img`
     width: 50px;
 `
 
+export const CityShowImage = styled.img`
+    width: 45vw;
+    margin-left: 100px;
+    background-attachment: fixed;
+    
+`
 
-export default { SplashImage, CityImage, LogoImage }
+
+export default { SplashImage, CityImage, LogoImage, CityShowImage }
