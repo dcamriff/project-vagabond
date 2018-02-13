@@ -4,7 +4,7 @@ import { LogoImage } from './styled-components/Images'
 const NavBar = () => {
     return (
         <Nav>
-            <LogoImage src="https://i.imgur.com/Iv70Ed1.png"/>
+            <a href="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></a>
             <div>
                 <a href="#">Sign Up</a>
                 <a href="#">Login</a>

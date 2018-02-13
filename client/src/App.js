@@ -9,6 +9,12 @@ import CityShow from './components/CityShow'
 
 class App extends Component {
   state = {
+    city: {
+      id: 1,
+      name: 'Atlanta',
+      picture: 'http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg'
+    },
+    
     cities: [
       {
         id: 1,
@@ -107,6 +113,7 @@ class App extends Component {
   render() {
 
     const HomeComponent = () => (<Home cities={this.state.cities} />)
+    const CityShowComponent = () => (<CityShow city={this.state.city} />)
     
     return (
       <Router>
@@ -114,6 +121,7 @@ class App extends Component {
           <NavBar/>
           <Switch>
           <Route exact path="/" component={HomeComponent} />
+          <Route exact path="/cities/:id" component={CityShowComponent} />
           </Switch>
         </div>
       </Router>
