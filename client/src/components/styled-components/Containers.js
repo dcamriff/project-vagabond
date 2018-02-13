@@ -58,8 +58,36 @@ export const SplashHeaderContainer = PhotoHeaderContainer.extend`
     
 `
 
+export const CityInfoContainer = styled.div`
+    width: 45vw;
+    border: 1px solid yellow;
+  
+`
+
+export const CityShowContainer = styled.div`
+    display: flex;
+    background-color: #1b1b1b;
+
+`
+export const CityImageCenteringContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    height: 100vh;
+`
 
 
-
-
-export default { HomeContainer, SplashImageContainer, SplashHeaderContainer, PhotoCenteringContainer, PhotoHeaderContainer, CityIndexContainer, CityHeaderContainer, TaglineContainer }
+export default { 
+    HomeContainer, 
+    SplashImageContainer, 
+    SplashHeaderContainer, 
+    PhotoCenteringContainer, 
+    PhotoHeaderContainer, 
+    CityIndexContainer, 
+    CityHeaderContainer, 
+    TaglineContainer,
+    CityInfoContainer,
+    CityShowContainer,
+    CityImageCenteringContainer
+ }
