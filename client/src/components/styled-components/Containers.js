@@ -46,6 +46,10 @@ export const TaglineContainer = styled.div`
 `
 
 export const CityHeaderContainer = PhotoHeaderContainer.extend`
+a {
+    text-decoration: none;
+    color: white;
+}
 
 `
 

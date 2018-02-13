@@ -6,7 +6,9 @@ const CityIndex = (props) => {
     return (
         <div>
             <CityContainer>
-            <CityHeaderContainer>{props.name}</CityHeaderContainer>
+            <CityHeaderContainer>
+                <a href="#">{props.name}</a>
+                </CityHeaderContainer>
             <CityImage src={props.picture} alt={props.name}/> 
             </CityContainer>
             
