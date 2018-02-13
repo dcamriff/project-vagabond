@@ -5,7 +5,6 @@ const CityIndex = (props) => {
         <div>
             <h1>{props.name}</h1>
             <img width="416" src={props.picture} alt={props.name}/>
-
         </div>
     )
 }
