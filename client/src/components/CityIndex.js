@@ -1,10 +1,15 @@
 import React from 'react'
+import { PhotoHeaderContainer, CityHeaderContainer, CityContainer } from './styled-components/Containers'
+import { CityImage } from './styled-components/Images'
 
 const CityIndex = (props) => {
     return (
         <div>
-            <h1>{props.name}</h1>
-            <img width="416" src={props.picture} alt={props.name}/>
+            <CityContainer>
+            <CityHeaderContainer>{props.name}</CityHeaderContainer>
+            <CityImage src={props.picture} alt={props.name}/> 
+            </CityContainer>
+            
         </div>
     )
 }
