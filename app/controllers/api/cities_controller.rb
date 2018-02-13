@@ -1,6 +1,6 @@
 class Api::CitiesController < ApplicationController
   # before_action :set_city, only: [:show, :update, :destroy]
-
+#  banana
   # GET /cities
   def index
     print "BANANANANANANA"
