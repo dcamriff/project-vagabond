@@ -4,7 +4,7 @@ import { SplashImage } from './styled-components/Images'
 
 const Home = (props) => {
     return (
-        <div>Hello from Home!
+        <div>Hello from Banana!!
             <div>
                 <SplashImage src="https://i.imgur.com/6WylPSF.png" alt="{cities.name}"/>
             </div>
