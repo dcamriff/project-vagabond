@@ -15,8 +15,8 @@ export const PhotoCenteringContainer = styled.div`
     align-items: center;
 `
 export const PhotoHeaderContainer = styled.div`
-     position: absolute;
-     z-index: +1;
+    position: absolute;
+    z-index: +1;
     
 `
 
@@ -25,9 +25,9 @@ export const SplashImageContainer = PhotoCenteringContainer.extend`
     color: white;
     font-family: 'Raleway', sans-serif;
     text-shadow: 1px 1px rgba(0,0,0, 0.50);  
-  
+
 `
- // font-family: 'Permanent Marker', sans-serif;
+// font-family: 'Permanent Marker', sans-serif;
 
 export const CityContainer = PhotoCenteringContainer.extend`
     font-size: 5em;
@@ -37,7 +37,7 @@ export const CityContainer = PhotoCenteringContainer.extend`
 `
 
 export const TaglineContainer = styled.div`
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3em;
