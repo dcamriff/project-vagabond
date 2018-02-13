@@ -39,9 +39,41 @@ ninti = User.create(
   picture: "https://i.imgur.com/QKCVUFz.jpg?3")
 
 
-atlanta = City.create(name: "Atlanta", description: "What a stunning southern destination.", country: "United States", picture: "http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg", population: 20000)
-tokyo = City.create(name: "Tokyo", description: "The largest metroplis in the world", country: "Japan", picture: "http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg", population: 20000)
-london = City.create(name: "London", description: "Charming, historical, rainy city.", country: "United Kingdom", picture: "https://i.imgur.com/wDNv0QU.jpg", population: 2000)
+  
+atlanta = City.create(
+  name: "Atlanta", 
+  description: "What a stunning southern destination.", 
+  country: "United States", 
+  picture: "http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg", 
+  population: 20000
+  )
+tokyo = City.create(
+  name: "Tokyo", 
+  description: "The largest metroplis in the world", 
+  country: "Japan", 
+  picture: "http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg", 
+  population: 20000
+  )
+london = City.create(
+  name: "London", 
+  description: "Charming, historical, rainy city.", 
+  country: "United Kingdom", 
+  picture: "https://i.imgur.com/wDNv0QU.jpg", 
+  population: 2000
+  )
 
-post1 = Post.create(city: atlanta, user: marco, title: "Ugly City", content: "This is an ugly city", tag: "ugly")
-post2 = Post.create(city: london, user: ninti, title: "Nice City", content: "This is an nice city", tag: "nice")
+
+post1 = Post.create(
+  city: atlanta, 
+  user: marco, 
+  title: "Ugly City", 
+  content: "This is an ugly city", 
+  tag: "ugly"
+  )
+post2 = Post.create(
+  city: london, 
+  user: ninti, 
+  title: "Nice City", 
+  content: "This is an nice city", 
+  tag: "nice"
+  )
