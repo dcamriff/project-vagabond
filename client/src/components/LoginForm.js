@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
+<<<<<<< HEAD
 class LoginForm = () => {
     return (
         <div></div>
@@ -18,15 +19,32 @@ class LoginForm = () => {
                             </FormButton>
                         </ButtonContainer>
                     </InputAndButtonContainer>
+=======
+state = {
+    username: ""
+  }
 
-                    <FormInput
-                        type="string"
-                        name="picture"
-                        placeholder="Add a picture!"
-                        onChange={this.handleInputChange}/>
+  handlChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+    event.preventDefault()
+  }
+>>>>>>> login
 
-                </FormBody>
-            </FormWrapper>
+  handleSubmit = (event) => {
+    axios.post('/api/users', this.state)
+      .then((res) => {
+        this.props.updateState(res.data)
+        localStorage.setItem("userId", res.data._id)
+        this.setState(res.data)
+      })
+      .catch((error) => { console.log(error) })
+    event.preventDefault()
+  }
+
+const LoginForm = () => {
+    return (
+        <div>
+            Hello from Login Form
         </div>
     )
 }
