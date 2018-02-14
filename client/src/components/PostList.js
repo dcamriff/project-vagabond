@@ -2,7 +2,7 @@ import React from 'react'
 import PostIndex from './PostIndex'
 
 const PostList = (props) => {
-    
+
     const postList = props.posts.map((post, index)=>{
         return (
         <PostIndex city = {post.city} 
@@ -12,6 +12,7 @@ const PostList = (props) => {
         picture = {post.picture}
         cityId = {post.city_id}
         postId = {post.post_id}
+        deletePost = {props.deletePost}
         key = {index} 
         />
         )
