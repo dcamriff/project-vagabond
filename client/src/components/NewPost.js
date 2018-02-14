@@ -10,11 +10,36 @@ class NewPost extends Component {
             newPost: {}
         }
     }
+
+    handleInputChange = (event) => {
+        const attributeName = event.target.name
+        let attributeValue = event.target.value
+        const newPost = {
+            ...this.state.newPost
+        }
+        newPost[attributeName] = attributeValue
+        this.setState({newPost})
+        console.log(this.state)
+    }
+
+    resetForm = () => {
+        const newPost = {...this.state.newPost}
+        this.setState({newPost, redirect: true})
+    }
+
+    addNewPost = (event) => {
+        event.preventDefault()
+        const newPost = {...this.state.newPost}
+        this.resetForm()
+        // this.props.addNewPost(newPost)
+        console.log(this.state)
+    }
+
     render() {
         return (
            
             <div>
-                {/* {this.state.redirect ? <Redirect to="/users">Users</Redirect> : */}
+                {/* {this.state.redirect ? <Redirect to="/Posts">Posts</Redirect> : */}
                 <FormWrapper>
                       <FormBody onSubmit={this.addNewPost}>
                     <InputAndButtonContainer>
