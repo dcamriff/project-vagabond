@@ -6,22 +6,11 @@ import { Link } from 'react-router-dom'
 
 const PostIndex = (props) => {
 
-    // async deletePost() {
-    //     try {
-    //         await axios.get(`/api/cities/${this.props.cityId}/posts/${this.props.postId}/delete` )
-    //         this.redirectToUsers()
-    //         // this.props.deletePost()
-    //         window.location.reload()
-
-    //     }
-    //     catch (err) {
-    //         console.log(err)
-    //     }
-    // }
-
-    // /api/cities/${this.props.cityId}/posts/${this.props.postId}/delete
+    deletePost = () => {
+        this.props.deletePost()
+    }
     
- 
+  
     return(
         <div>
         <CityInfo>
