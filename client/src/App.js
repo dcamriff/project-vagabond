@@ -6,6 +6,7 @@ import Home from './components/Home'
 import NavBar from './components/NavBar'
 import CityShow from './components/CityShow'
 import NewPost from './components/NewPost'
+import LoginForm from './components/LoginForm'
 import axios from 'axios'
 
 
@@ -47,6 +48,7 @@ class App extends Component {
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/cities/:id" component={CityShowComponent} />
           <Route exact path="/cities/:city_id/posts/new" component={NewPostComponent} />
+          <Route exact path="/login" component={LoginForm} />
           </Switch>
         </div>
       </Router>
