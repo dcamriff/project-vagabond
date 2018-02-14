@@ -10,13 +10,31 @@ import axios from 'axios'
 
 class App extends Component {
   state = {
-    cities: []
+    cities: [],
+    city: {
+      name: "Atlanta",
+      picture: "http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg"
+    },
+    posts: []
   }
 
-  getCities = () => {
-    axios.get('/api/cities')
-    .then((res) => {this.setState({cities : res.data}) })
+
+  async getCities() {
+    try{
+      const res = await axios.get('/api/cities')
+      const cities = res.data
+      this.setState({cities: cities})
+    }
+    catch(err){
+      console.log(err)
+    }
+
   }
+
+  // getPosts = () => {
+  //   axios.get('/api/cities/:city_id/posts')
+
+  // }
 
   componentWillMount() {
     this.getCities();

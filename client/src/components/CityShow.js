@@ -10,8 +10,8 @@ const CityShow = (props) => {
                     <CityShowImage src={props.city.picture} alt={props.city.name}/>
                 </CityImageCenteringContainer>
                 <CityInfoContainer>
-                    <CityInfo><h1>Here's What They Think...</h1></CityInfo>
-                    <CityInfo><a href="/cities/:id/posts/new">What do you think?</a></CityInfo>
+                    <CityInfo><h1>Hello From... </h1></CityInfo>
+                    <CityInfo><a href="/cities/:city_id/posts/new">(+) post</a></CityInfo>
                     <CityInfo>
                         <a href="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></a>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore repudiandae animi mollitia debitis illum earum laborum, sit a temporibus tempore, nihil dolor, quo blanditiis. Iure blanditiis in iusto. Maiores, veniam!
                     </CityInfo>
