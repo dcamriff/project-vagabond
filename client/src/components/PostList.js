@@ -10,7 +10,10 @@ const PostList = (props) => {
         title = {post.title}
         content = {post.content}
         picture = {post.picture}
-        key = {index} />
+        cityId = {post.city_id}
+        postId = {post.post_id}
+        key = {index} 
+        />
         )
     })
 
