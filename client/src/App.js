@@ -14,8 +14,7 @@ class App extends Component {
     city: {
       name: "Atlanta",
       picture: "http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg"
-    },
-    posts: []
+    }
   }
 
 
@@ -31,13 +30,9 @@ class App extends Component {
 
   }
 
-  // getPosts = () => {
-  //   axios.get('/api/cities/:city_id/posts')
-
-  // }
 
   componentWillMount() {
-    this.getCities();
+    this.getCities()
   }
 
   render() {
