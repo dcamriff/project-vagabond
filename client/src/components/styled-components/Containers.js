@@ -82,6 +82,16 @@ export const PostHeaderContainer = styled.div`
     border: 1px solid orange;
     display: flex;
 `
+export const GenericFormContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1b1b1b;
+    border: 1px solid yellow;
+    background: url("http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg");
+`
 
 
 export default { 
@@ -96,5 +106,6 @@ export default {
     CityInfoContainer,
     CityShowContainer,
     CityImageCenteringContainer,
-    PostHeaderContainer
+    PostHeaderContainer,
+    GenericFormContainer
  }
