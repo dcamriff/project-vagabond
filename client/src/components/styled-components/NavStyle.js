@@ -10,7 +10,7 @@ export const Nav = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5vh;
+    height: 7vh;
     margin-bottom: 25px;
     background-color: linear-gradient(to right, rgb(0, 204, 255) , rgb(250,215,215));
     a{
