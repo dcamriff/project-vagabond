@@ -1,32 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class LoginForm = () => {
+state = {
+    username: ""
+  }
+
+  handlChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+    event.preventDefault()
+  }
+
+  handleSubmit = (event) => {
+    axios.post('/api/users', this.state)
+      .then((res) => {
+        this.props.updateState(res.data)
+        localStorage.setItem("userId", res.data._id)
+        this.setState(res.data)
+      })
+      .catch((error) => { console.log(error) })
+    event.preventDefault()
+  }
+
+const LoginForm = () => {
     return (
         <div>
-            <FormWrapper>
-                <FormBody onSubmit={this.addNewPost}>
-                    <InputAndButtonContainer>
-                        <FormInput
-                            type="string"
-                            name="username"
-                            placeholder="enter username"
-                            onChange={this.handleInputChange}/>
-                        <ButtonContainer>
-                            <FormInputButton type="submit" value="+"/>
-                            <FormButton>
-                                <Link to="#">-</Link>
-                            </FormButton>
-                        </ButtonContainer>
-                    </InputAndButtonContainer>
-
-                    <FormInput
-                        type="string"
-                        name="picture"
-                        placeholder="Add a picture!"
-                        onChange={this.handleInputChange}/>
-
-                </FormBody>
-            </FormWrapper>
+            Hello from Login Form
         </div>
     )
 }
