@@ -3,7 +3,7 @@ class Api::PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc)
 
     render json: @posts
   end
@@ -18,9 +18,9 @@ class Api::PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render :status => 200
     else
-      render json: @post.errors, status: :unprocessable_entity
+      puts "banana"
     end
   end
 
