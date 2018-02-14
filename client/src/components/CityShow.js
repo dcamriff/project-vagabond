@@ -33,6 +33,12 @@ class CityShow extends Component {
         }
         ]
     }
+
+
+    getPosts = () => {
+        axios.get(`/api/cities/${this.props.match.params.id}/posts`)
+        .then((res) => {this.setState({posts: res.data})})
+    }
     
     // async getPosts() {
     //     try{
@@ -50,11 +56,15 @@ class CityShow extends Component {
     //       this.getPosts()
     //   }
 
+    componentWillMount(){
+        // this.getPosts()
+        console.log(this.props)
+    }
     render(){
     return (
         <CityShowContainer>
                 <CityImageCenteringContainer>
-                    <CityShowImage src={this.props.city.picture} alt={this.props.city.name}/>
+                    {/* <CityShowImage src={this.props.city.picture} alt={this.props.city.name}/> */}
                 </CityImageCenteringContainer>
                 <CityInfoContainer>
                     <CityInfo><h1>Hello From... </h1></CityInfo>

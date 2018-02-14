@@ -11,11 +11,7 @@ import axios from 'axios'
 
 class App extends Component {
   state = {
-    cities: [],
-    city: {
-      name: "Atlanta",
-      picture: "http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg"
-    }
+    cities: []
   }
 
 
@@ -33,7 +29,7 @@ class App extends Component {
 
 
   componentWillMount() {
-    this.getCities()
+    this.getCities();
   }
 
   render() {
