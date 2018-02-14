@@ -61,7 +61,7 @@ london = City.create(
   population: 8600000
   )
 sanFran = City.create(
-  name: "San Francisco", 
+  name: "San Fran", 
   description: "The cultural, commercial and financial center of Northern California.", 
   country: "United States", 
   picture: "https://images.unsplash.com/photo-1502285745115-13e43e3faad4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=025ea9ff10220737ea011f6a9ef016d6&auto=format&fit=crop&w=2100&q=80", 
@@ -117,7 +117,7 @@ lisbon = City.create(
     population: 545000
     )
 saigon = City.create(
-    name: "Ho Chi Minh City", 
+    name: "Saigon", 
     description: "A city rich in history and incredible food, it's still known to locals and tourists as Saigon.", 
     country: "Vietnam", 
     picture: "http://www.detouredasia.com/wp-content/uploads/2016/11/ho-chi-minh-city-saigon-cu-chi-tunnels.jpg", 
