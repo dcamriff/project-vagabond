@@ -78,6 +78,11 @@ export const CityImageCenteringContainer = styled.div`
     background-attachment: fixed;
 `
 
+export const PostHeaderContainer = styled.div`
+    border: 1px solid orange;
+    display: flex;
+`
+
 
 export default { 
     HomeContainer, 
@@ -90,5 +95,6 @@ export default {
     TaglineContainer,
     CityInfoContainer,
     CityShowContainer,
-    CityImageCenteringContainer
+    CityImageCenteringContainer,
+    PostHeaderContainer
  }

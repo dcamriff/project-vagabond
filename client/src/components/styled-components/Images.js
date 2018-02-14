@@ -11,7 +11,6 @@ export const LogoImage = styled.img`
     margin: 15px 0 5px 15px;
     width: 50px;
 `
-
 export const CityShowImage = styled.img`
     width: 45vw;
     margin-left: 100px;
@@ -19,5 +18,11 @@ export const CityShowImage = styled.img`
     
 `
 
+export const PostIcon = styled.img`
+    width: 50px;
+    height: 50px;
+`
 
-export default { SplashImage, CityImage, LogoImage, CityShowImage }
+
+
+export default { SplashImage, CityImage, LogoImage, CityShowImage, PostIcon }
