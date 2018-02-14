@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-
+import { Redirect, Link } from 'react-router-dom'
+import { GenericFormContainer } from './styled-components/Containers'
+import { InputAndButtonContainer, ButtonContainer, TextArea, FormWrapper, FormHeader, FormHeading, FormBody, FormField, FormInput, FormButton, FormInputButton} from './styled-components/Form'
 class NewPost extends Component {
     constructor(props) {
         super(props)
@@ -10,52 +12,50 @@ class NewPost extends Component {
     }
     render() {
         return (
+           
             <div>
-                Hello from NewPost
+                {/* {this.state.redirect ? <Redirect to="/users">Users</Redirect> : */}
+                <FormWrapper>
+                      <FormBody onSubmit={this.addNewPost}>
+                    <InputAndButtonContainer>
+                        <FormInput
+                            type="string"
+                            name="title"
+                            placeholder="Name your post!"
+                            onChange={this.handleInputChange} />
+                             <ButtonContainer>
+                                <FormInputButton
+                                    type="submit"
+                                    value="+" />
+                                <FormButton><Link to="#">-</Link></FormButton>
+                        </ButtonContainer>
+                    </InputAndButtonContainer>
+
+                  
+                        <FormInput
+                            type="string"
+                            name="picture"
+                            placeholder="Add a picture!"
+                            onChange={this.handleInputChange} />
+                   
+                  
+                      
+                        <FormInput
+                            type="text-area"
+                            name="img"
+                            placeholder="Image URL"
+                            onChange={this.handleInputChange} />
+                   
+    
+                        <TextArea
+                            type="string"
+                            name="img"
+                            placeholder="Tell us about it"
+                            onChange={this.handleInputChange} />
+                   
+                </FormBody>
+                </FormWrapper>
             </div>
-            // <UserFormContainer>
-
-            //     Hello from UserForm
-            //     {this.state.redirect ? <Redirect to="/users">Users</Redirect> :
-            //     <FormWrapper>
-            //           <FormBody onSubmit={this.addNewUser}>
-            //         <FormField>
-            //             <FormHeader>
-            //                 <FormHeading>New User</FormHeading>
-            //             </FormHeader>
-            //             <FormInput
-            //                 type="string"
-            //                 name="firstName"
-            //                 placeholder="First Name"
-            //                 onChange={this.handleInputChange} />
-            //         </FormField>
-
-            //         <FormField>
-                        
-            //             <FormInput
-            //                 type="string"
-            //                 name="lastName"
-            //                 placeholder="Last Name"
-            //                 onChange={this.handleInputChange} />
-            //         </FormField>
-            //         <FormField>
-            //             <FormInput
-            //                 type="string"
-            //                 name="img"
-            //                 placeholder="Image URL"
-            //                 onChange={this.handleInputChange} />
-            //         </FormField>
-            //         <FormField>
-            //             <FormInputButton
-            //                 type="submit"
-            //                 value="Add New User" />
-            //         </FormField>
-            //         <FormField>
-            //         <FormButton><Link to="/users">Cancel</Link></FormButton>
-            //         </FormField>
-            //     </FormBody>
-            //     </FormWrapper>}
-            // </UserFormContainer>
         )
 
     }
