@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class LoginForm = () => {
     return (
-        <div>
+        <div></div>
             <FormWrapper>
                 <FormBody onSubmit={this.addNewPost}>
                     <InputAndButtonContainer>
