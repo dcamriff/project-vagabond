@@ -11,7 +11,7 @@ const PostList = (props) => {
         content = {post.content}
         picture = {post.picture}
         cityId = {post.city_id}
-        postId = {post.post_id}
+        postId = {post.id}
         deletePost = {props.deletePost}
         key = {index} 
         />
