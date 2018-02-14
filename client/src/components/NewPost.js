@@ -35,11 +35,15 @@ class NewPost extends Component {
         console.log(this.state)
     }
 
+    showPostForm = () => {
+        this.props.showPostForm()
+    }
+
     render() {
         return (
            
             <div>
-                {/* {this.state.redirect ? <Redirect to="/Posts">Posts</Redirect> : */}
+                {this.props.showPostFormState ?  
                 <FormWrapper>
                       <FormBody onSubmit={this.addNewPost}>
                     <InputAndButtonContainer>
@@ -52,7 +56,7 @@ class NewPost extends Component {
                                 <FormInputButton
                                     type="submit"
                                     value="+" />
-                                <FormButton><Link to="#">-</Link></FormButton>
+                                <FormButton onClick={()=> this.showPostForm()}>-</FormButton>
                         </ButtonContainer>
                     </InputAndButtonContainer>
 
@@ -79,7 +83,7 @@ class NewPost extends Component {
                             onChange={this.handleInputChange} />
                    
                 </FormBody>
-                </FormWrapper>
+                </FormWrapper> : null}
             </div>
         )
 
