@@ -64,23 +64,11 @@ class CityShow extends Component {
         
     }
 
-    async deleteUser(userId) {
-        try {
-            console.log('DELETE', userId)
-            await axios.get('/api/users/' + userId + '/delete')
-            this.redirectToUsers()
-            window.location.reload()
 
-        }
-        catch (err) {
-            console.log(err)
-        }
-    }
 
     async deletePost(cityId, postId) {
-        console.log("CLICKED!")
         try{
-            await axios.get(`/api/cities/${cityId}/posts/${postId}/delete`)
+            await axios.delete(`/api/cities/${cityId}/posts/${postId}`)
         }
         catch(err){
             console.log(err)

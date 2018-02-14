@@ -38,6 +38,7 @@ class Api::CitiesController < ApplicationController
   # DELETE /cities/1
   def destroy
     @city.destroy
+    render status: :ok
   end
 
   private
