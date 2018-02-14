@@ -9,13 +9,10 @@ import {
   UserFormInput
 } from './styled-components/Form'
 
-<<<<<<< HEAD
 
-state = {
-=======
+
 class LoginForm extends Component {
   state = {
->>>>>>> login
     username: ""
   }
 
@@ -57,11 +54,6 @@ class LoginForm extends Component {
   render() {
 
     return (
-<<<<<<< HEAD
-        <div>
-       Hello
-        </div>
-=======
       <LoginWrapper>
         <UserFormBody>
           <UserFormHeader>
@@ -83,7 +75,6 @@ class LoginForm extends Component {
 
         </UserFormBody>
       </LoginWrapper>
->>>>>>> login
     )
   }
 }
