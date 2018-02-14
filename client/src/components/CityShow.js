@@ -40,6 +40,10 @@ class CityShow extends Component {
         axios.get(`/api/cities/${this.props.match.params.id}/posts`)
         .then((res) => {this.setState({posts: res.data})})
     }
+    getCityInfo = () => {
+        axios.get(`/api/cities/${this.props.match.params.id}`)
+        .then((res) => {this.setState({city: res.data})})
+    }
     
     // async getPosts() {
     //     try{
@@ -59,6 +63,7 @@ class CityShow extends Component {
 
     componentWillMount(){
         this.getPosts()
+        this.getCityInfo()
         console.log(this.props)
     }
     render(){
