@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const LoginForm = () => {
+class LoginForm = () => {
     return (
         <div>
-            Hello from Login Form
+            <FormWrapper>
+                <FormBody onSubmit={this.addNewPost}>
+                    <InputAndButtonContainer>
+                        <FormInput
+                            type="string"
+                            name="username"
+                            placeholder="enter username"
+                            onChange={this.handleInputChange}/>
+                        <ButtonContainer>
+                            <FormInputButton type="submit" value="+"/>
+                            <FormButton>
+                                <Link to="#">-</Link>
+                            </FormButton>
+                        </ButtonContainer>
+                    </InputAndButtonContainer>
+
+                    <FormInput
+                        type="string"
+                        name="picture"
+                        placeholder="Add a picture!"
+                        onChange={this.handleInputChange}/>
+
+                </FormBody>
+            </FormWrapper>
         </div>
     )
 }
