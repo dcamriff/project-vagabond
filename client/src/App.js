@@ -35,7 +35,7 @@ class App extends Component {
   render() {
 
     const HomeComponent = () => (<Home cities={this.state.cities} />)
-    const CityShowComponent = () => (<CityShow city={this.state.city} />)
+    const CityShowComponent = (props) => (<CityShow city={this.state.city} {...props}  />)
     const NewPostComponent = ()=> (<NewPost />)
     
     return (
