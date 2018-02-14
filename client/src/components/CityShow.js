@@ -45,25 +45,31 @@ class CityShow extends Component {
         
     }
 
+    async deleteUser(userId) {
+        try {
+            console.log('DELETE', userId)
+            await axios.get('/api/users/' + userId + '/delete')
+            this.redirectToUsers()
+            window.location.reload()
 
-     // /api/cities/${this.props.cityId}/posts/${this.props.postId}/delete
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
 
+    async deletePost(cityId, postId) {
+        console.log("CLICKED!")
+        try{
+            await axios.get(`/api/cities/${cityId}/posts/${postId}/delete`)
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
 
-    // async getPosts() {
-    //     try{
-    //       const res = await axios.get(`/api/cities/${this.props.match.params}/posts`)
-    //       const posts = res.data
-    //       console.log("CALLEDIT", posts)
-    //       this.setState({posts: posts})
-    //     }
-    //     catch(err){
-    //       console.log(err)
-    //     }
-    //   }
+     
 
-    //   componentWillMount(){
-    //       this.getPosts()
-    //   }
 
     render(){
     return (
@@ -74,8 +80,8 @@ class CityShow extends Component {
                 <CityInfoContainer>
                     <CityInfo><h1>Hello From... </h1></CityInfo>
                     <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) post</FormButton></CityInfo>
-                    <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm}/>
-                    <PostList posts = {this.state.posts}/>
+                    <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} />
+                    <PostList posts = {this.state.posts} deletePost = {this.deletePost}/>
                 </CityInfoContainer>
         </CityShowContainer>
     )
