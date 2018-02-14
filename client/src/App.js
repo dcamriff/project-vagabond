@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import CityShow from './components/CityShow'
+import NewPost from './components/NewPost'
 import axios from 'axios'
 
 
@@ -39,6 +40,7 @@ class App extends Component {
 
     const HomeComponent = () => (<Home cities={this.state.cities} />)
     const CityShowComponent = () => (<CityShow city={this.state.city} />)
+    const NewPostComponent = ()=> (<NewPost />)
     
     return (
       <Router>
@@ -47,6 +49,7 @@ class App extends Component {
           <Switch>
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/cities/:id" component={CityShowComponent} />
+          <Route exact path="/new" component={NewPostComponent} />
           </Switch>
         </div>
       </Router>
