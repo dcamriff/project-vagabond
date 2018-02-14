@@ -99,7 +99,7 @@ class CityShow extends Component {
     return (
         <CityShowContainer>
                 <CityImageCenteringContainer>
-                    {/* <CityShowImage src={this.props.city.picture} alt={this.props.city.name}/> */}
+                    <CityShowImage src={this.state.city.picture} alt={this.state.city.name}/>
                 </CityImageCenteringContainer>
                 <CityInfoContainer>
                     <CityInfo><h1>Hello From... </h1></CityInfo>

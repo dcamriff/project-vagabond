@@ -22,7 +22,11 @@ export const PostIcon = styled.img`
     width: 50px;
     height: 50px;
 `
+export const TrashIcon = styled.img`
+    width: 15px;
+    height: 15px;
+`
 
 
 
-export default { SplashImage, CityImage, LogoImage, CityShowImage, PostIcon }
+export default { SplashImage, CityImage, LogoImage, CityShowImage, PostIcon, TrashIcon }
