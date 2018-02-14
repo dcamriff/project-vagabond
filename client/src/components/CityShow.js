@@ -9,6 +9,7 @@ import axios from 'axios'
 class CityShow extends Component {
 
     state = {
+        city: {},
         posts: [
         {
             city: "London", 
@@ -57,7 +58,7 @@ class CityShow extends Component {
     //   }
 
     componentWillMount(){
-        // this.getPosts()
+        this.getPosts()
         console.log(this.props)
     }
     render(){
