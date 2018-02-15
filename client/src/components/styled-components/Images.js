@@ -7,11 +7,6 @@ export const CityImage = styled.img`
     width: 416px;
     height: 286.86px;
 
-    @media only screen and (min-width: 1000px){
-        width: 385px;
-        height: 286.86px;
-    
-    }
 `
 export const LogoImage = styled.img`
     margin: 15px 0 5px 15px;
@@ -19,8 +14,16 @@ export const LogoImage = styled.img`
 `
 export const CityShowImage = styled.img`
     width: 45vw;
-    margin-left: 100px;
+    
     background-attachment: fixed;
+
+    @media only screen and (min-width: 900px){
+        margin-left: 100px;
+    }
+
+    @media only screen and (max-width: 900px){
+        width: 100%;
+    }
     
 `
 
