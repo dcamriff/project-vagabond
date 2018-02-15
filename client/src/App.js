@@ -12,7 +12,12 @@ import axios from 'axios'
 
 class App extends Component {
   state = {
-    cities: []
+    cities: [],
+    isLoggedIn: false
+  }
+
+  isLoggedIn = () => {
+    this.setState({isLoggedIn: true})
   }
 
 
@@ -39,11 +44,12 @@ class App extends Component {
     const HomeComponent = () => (<Home cities={this.state.cities} />)
     const CityShowComponent = (props) => (<CityShow city={this.state.city} {...props}  />)
     const NewPostComponent = ()=> (<NewPost />)
+    const LoginInFormComponent = () => (<LoginForm isLoggedIn={this.isLoggedIn}/>) 
     
     return (
       <Router>
         <div>
-          <NavBar />
+          <NavBar isLoggedIn={this.state.isLoggedIn}/>
           <Switch>
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/cities/:id" component={CityShowComponent} />

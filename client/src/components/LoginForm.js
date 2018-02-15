@@ -21,6 +21,7 @@ class LoginForm extends Component {
     const loginUser = {
       ...this.state.loginUser
     }
+    this.props.isLoggedIn()
     console.log('Getting User for login')
     this.resetForm()
     this
