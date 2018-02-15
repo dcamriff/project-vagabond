@@ -38,11 +38,60 @@ export const CityImage = styled.img`
         height: 286.86px;
     
     }
+    @media only screen and (max-width: 1160px){
+        width: 382px;
+        height: 286.86px;
+    
+    }
+    @media only screen and (max-width: 1145px){
+        width: 375px;
+        height: 286.86px;
+    
+    }
+    @media only screen and (max-width: 1110px){
+        width: 365px;
+        height: 286.86px;
+    
+    }
+    @media only screen and (max-width: 1100px){
+        width: 330px;
+        height: 286.86px;
+    
+    }
+    @media only screen and (max-width: 1036px){
+        width: 305px;
+        height: 286.86px;
+    
+    }
+    @media only screen and (max-width: 1080px){
+        width: 345px;
+        height: 286.86px;
+    
+    }
+    
     
     @media only screen and (max-width: 900px){
         width: 424.2px;
         height: 286.86px;
     }
+    @media only screen and (max-width: 850px){
+        width: 421px;
+        height: 286.86px;
+    }
+    @media only screen and (max-width: 800px){
+        width: 397px;
+        height: 286.86px;
+    }
+    @media only screen and (max-width: 840px){
+        width: 380px;
+        height: 286.86px;
+    }
+    @media only screen and (max-width: 795px){
+    
+        width: 300px;
+        height: 286.86px;
+    }
+
 
     @media only screen and (max-width: 787px){
         width: 100%;
