@@ -33,12 +33,7 @@ class NewPost extends Component {
         
         event.preventDefault()
         axios.post(`/api/cities/${this.state.city_id}/posts`, this.state.newPost)
-        .then((res) => { 
-            const newPost = res.data
-            const posts = [...this.state.posts]
-            posts.push(newPost)
-            this.setState({ posts })
-        })
+        .then((res) => { this.props.getPosts()})
         .catch((error) => {console.log(error)}) 
     }
 
@@ -72,6 +67,7 @@ class NewPost extends Component {
                         <FormInput
                             type="string"
                             name="picture"
+                            value="https://images.unsplash.com/photo-1454473332662-09275b52e5a1?ixlib=rb-0.3.5&s=c2ec918ca71006a0b0c5ab301ad885a1&auto=format&fit=crop&w=2550&q=80"
                             placeholder="Add a picture!"
                             onChange={this.handleInputChange} />
                    
