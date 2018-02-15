@@ -28,7 +28,8 @@ class LoginForm extends Component {
     axios.get(`/api/users/retrieve/${this.state.username}`)
       .then((res) => {
         if(res.data) {
-          localStorage.setItem("userId", res.data.id)
+          console.log(res.data[0].id)
+          localStorage.setItem("userId", res.data[0].id)
           this.setState({login: true})
         }
         
