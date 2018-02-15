@@ -1,6 +1,6 @@
 import React from 'react'
-import { PostIcon, TrashIcon } from './styled-components/Images'
-import { PostHeaderContainer } from './styled-components/Containers'
+import { PostIcon, TrashIcon, EditIcon } from './styled-components/Images'
+import { PostHeaderContainer, TrashAndEditIconsContainer } from './styled-components/Containers'
 import { CityInfo } from './styled-components/Text'
 import { Link } from 'react-router-dom'
 
@@ -14,11 +14,15 @@ const PostIndex = (props) => {
                 <PostIcon  src={props.picture}/>
                 <p>{props.user}</p>
             </PostHeaderContainer>
+            <TrashAndEditIconsContainer>
+
+            <Link to="#"><p>{props.title}</p></Link>
             <div>
             <TrashIcon src="https://i.imgur.com/OMSX8Z5.png" onClick={() => { props.deletePost(props.cityId, props.postId) }} />
-                <Link to="#"><p>{props.title}</p></Link>
-                <p>{props.content}</p>
+            <EditIcon src="https://i.imgur.com/L0xUMw1.png" onClick={() => { props.deletePost(props.cityId, props.postId) }} />
             </div>
+            </TrashAndEditIconsContainer>
+            <p>{props.content}</p>
         </CityInfo>
         </div>
     )

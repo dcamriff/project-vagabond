@@ -14,26 +14,31 @@ export const LogoImage = styled.img`
 `
 export const CityShowImage = styled.img`
     width: 45vw;
-    
     background-attachment: fixed;
 
     @media only screen and (min-width: 900px){
-        margin-left: 100px;
+        margin-left: 30px;
     }
 
     @media only screen and (max-width: 900px){
-        width: 100%;
+        width: 80%;
     }
     
 `
 
 export const PostIcon = styled.img`
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    
 `
 export const TrashIcon = styled.img`
     width: 15px;
     height: 15px;
+    margin: 0 10px 0 10px;
+`
+
+export const EditIcon = TrashIcon.extend`
+
 `
 
 

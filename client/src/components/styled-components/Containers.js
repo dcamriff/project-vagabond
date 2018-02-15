@@ -27,7 +27,6 @@ export const SplashImageContainer = PhotoCenteringContainer.extend`
     text-shadow: 1px 1px rgba(0,0,0, 0.50);  
 
 `
-// font-family: 'Permanent Marker', sans-serif;
 
 export const CityContainer = PhotoCenteringContainer.extend`
     font-size: 5em;
@@ -60,6 +59,11 @@ export const SplashHeaderContainer = PhotoHeaderContainer.extend`
 
 export const CityInfoContainer = styled.div`
     width: 45vw;
+
+    @media only screen and (min-width: 900px){
+        margin-top: 30vh;
+    }
+
     @media only screen and (max-width: 900px){
         flex-direction: column;
         width:65vw;
@@ -85,6 +89,7 @@ export const CityImageCenteringContainer = styled.div`
 
     @media only screen and (min-width: 900px){
         height: 100vh;
+        margin-right: 30px;
     }
     @media only screen and (max-width: 900px){
        width: 100vw;
@@ -103,7 +108,11 @@ export const GenericFormContainer = styled.div`
     background-color: #1b1b1b;
     background: url("http://www.unit2fitness.com/wp-content/uploads/2013/01/Graffiti-Wallpaper-027.jpg");
 `
-
+export const TrashAndEditIconsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
 
 export default { 
     HomeContainer, 
@@ -118,5 +127,6 @@ export default {
     CityShowContainer,
     CityImageCenteringContainer,
     PostHeaderContainer,
-    GenericFormContainer
+    GenericFormContainer,
+    TrashAndEditIconsContainer
  }
