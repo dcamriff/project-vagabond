@@ -44,6 +44,7 @@ class App extends Component {
     const HomeComponent = () => (<Home cities={this.state.cities} />)
     const CityShowComponent = (props) => (<CityShow city={this.state.city} {...props}  />)
     const NewPostComponent = ()=> (<NewPost />)
+    const LoginFormComponent = () => (<LoginForm isLoggedIn = {this.isLoggedIn}/>)
     
     return (
       <Router>
@@ -53,7 +54,7 @@ class App extends Component {
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/cities/:id" component={CityShowComponent} />
           <Route exact path="/cities/:city_id/posts/new" component={NewPostComponent} />
-          <Route exact path="/login" component={LoginForm} />
+          <Route exact path="/login" component={LoginFormComponent} />
           </Switch>
         </div>
       </Router>

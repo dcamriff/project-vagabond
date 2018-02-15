@@ -41,7 +41,7 @@ class LoginForm extends Component {
   render() {
 
     if (this.state.login === true) {
-      console.log('homeeee')
+      this.props.isLoggedIn()
       return (<Redirect to="/" />)   
     }
 
