@@ -37,16 +37,16 @@ class PostEdit extends Component {
         console.log(this.state)
     }
 
-
-
-    showPostForm = () => {this.props.showPostForm()
+    showEditForm = () => {
+        this.props.showEditForm()
     }
+
 
     render() {
         return (
 
             <div>
-                {this.props.showPostFormState
+                {this.props.showEditFormState
                     ? <FormWrapper>
                             <FormBody onSubmit={this.addNewPost}>
                                 <InputAndButtonContainer>
@@ -54,11 +54,10 @@ class PostEdit extends Component {
                                         type="string"
                                         name="title"
                                         placeholder="update post title"
-                                        value={}
                                         onChange={this.handleInputChange}/>
                                     <ButtonContainer>
                                         <FormInputButton type="submit" value="+"/>
-                                        <FormButton onClick={() => this.showPostForm()}>-</FormButton>
+                                        <FormButton onClick={() => this.showEditForm()}>-</FormButton>
                                     </ButtonContainer>
                                 </InputAndButtonContainer>
 
@@ -66,21 +65,18 @@ class PostEdit extends Component {
                                     type="string"
                                     name="picture"
                                     placeholder="update picture"
-                                    value={}
                                     onChange={this.handleInputChange}/>
 
                                 <FormInput
                                     type="text-area"
                                     name="img"
                                     placeholder="Image URL"
-                                    value={}
                                     onChange={this.handleInputChange}/>
 
                                 <TextArea
                                     type="string"
                                     name="img"
                                     placeholder="update post content"
-                                    value={}
                                     onChange={this.handleInputChange}/>
 
                             </FormBody>
@@ -92,4 +88,4 @@ class PostEdit extends Component {
     }
 }
 
-export default EditPost
+export default PostEdit
