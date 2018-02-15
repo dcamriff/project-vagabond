@@ -59,6 +59,31 @@ class CityShow extends Component {
         .then((res) => {this.setState({posts: res.data})})
     }
     
+ 
+  async createPost(newPost){
+      try{
+          const res = await axios.post(`/api/cities/${this.props.match.params.id}/posts`)
+          newPost = res.data
+          const updatedPosts = [...this.state.posts]
+          this.setState({posts: updatedPosts})
+      }
+      catch(err){
+          console.log(err)
+      }
+  }
+    addNewPost = async (newPost) => {
+        try{
+           await this.createPost(newPost)
+           const posts = [...this.state.posts]
+           posts.push(newPost)
+           this.setState({ posts })   
+           this.showPostForm() 
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
+
     getCityInfo = () => {
         console.log(this.props.match.params.id)
         axios.get(`/api/cities/${this.props.match.params.id}`)
