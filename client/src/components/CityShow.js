@@ -75,7 +75,8 @@ class CityShow extends Component {
            await this.createPost(newPost)
            const posts = [...this.state.posts]
            posts.push(newPost)
-           this.setState({ posts })    
+           this.setState({ posts })   
+           this.showPostForm() 
         }
         catch(err){
             console.log(err)
