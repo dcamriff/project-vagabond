@@ -59,7 +59,7 @@ export const SplashHeaderContainer = PhotoHeaderContainer.extend`
 
 export const CityInfoContainer = styled.div`
     width: 45vw;
-
+    background-color: #1b1b1b;
     @media only screen and (min-width: 900px){
         margin-top: 30vh;
     }
@@ -73,7 +73,7 @@ export const CityInfoContainer = styled.div`
 
 export const CityShowContainer = styled.div`
     display: flex;
-    background-color: #1b1b1b;
+    background-color: white;
     @media only screen and (max-width: 900px){
         flex-direction: column;
         align-items: center;
@@ -112,6 +112,28 @@ export const TrashAndEditIconsContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+`
+
+export const NavDiv = styled.div`
+width: 100vw;
+position: fixed;        
+color: rgb(0, 0, 0);
+top: 0;
+left: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 7vh;
+margin-bottom: 25px;
+background-color: #1b1b1b;
+a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    margin-right: 20px;
+    font-size: 1.25em;
+    text-shadow: 1px 1px rgba(0,0,0, 0.1);
+}
 `
 
 export default { 

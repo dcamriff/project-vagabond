@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { CityContainer, CityInfoContainer, CityShowContainer, CityImageCenteringContainer } from './styled-components/Containers'
+import { NavDiv, CityContainer, CityInfoContainer, CityShowContainer, CityImageCenteringContainer } from './styled-components/Containers'
 import { CityShowImage, LogoImage } from './styled-components/Images'
-import { CityInfo } from './styled-components/Text'
+import { CityInfo, Href } from './styled-components/Text'
 import { FormButton } from './styled-components/Form'
 import NewPost from './NewPost'
 import PostList from './PostList'
@@ -104,6 +104,15 @@ class CityShow extends Component {
     render(){
     return (
         <CityShowContainer>
+                <NavDiv>
+                <a href="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></a>
+    
+            
+            <Href>
+                <a href="#">Sign Up</a>
+                <a href="/login">Login</a>
+            </Href>
+                </NavDiv>
                 <CityImageCenteringContainer>
                     <CityShowImage src={this.state.city.picture} alt={this.state.city.name}/>
                 </CityImageCenteringContainer>

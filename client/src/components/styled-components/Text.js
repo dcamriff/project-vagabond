@@ -12,6 +12,12 @@ export const CityInfo = styled.p `
 
 `
 
+export const Href = styled.div`
+    a {
+        color: #a1a9ab;
+    }
+`
 
 
-export default { CityInfo }
+
+export default { CityInfo, Href }
