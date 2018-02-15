@@ -139,6 +139,12 @@ export const ViewPicsContainer = styled.div`
     display: flex;
     justify-content: space-between;
 `
+
+export const LogOutContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
 export default { 
     HomeContainer, 
     SplashImageContainer, 
@@ -154,5 +160,6 @@ export default {
     PostHeaderContainer,
     GenericFormContainer,
     TrashAndEditIconsContainer,
-    ViewPicsContainer
+    ViewPicsContainer,
+    LogOutContainer
  }
