@@ -62,6 +62,8 @@ export const CityInfoContainer = styled.div`
     // background-color: #1b1b1b;
     @media only screen and (min-width: 900px){
         margin-top: 20vh;
+        height: 70vh;
+        overflow: scroll;
     }
 
     @media only screen and (max-width: 900px){
@@ -145,6 +147,17 @@ export const LogOutContainer = styled.div`
     align-items: center;
     justify-content: center;
 `
+export const PostBodyContainer = styled.div`
+    display: flex;
+`
+
+export const PostTitleAndBodyContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+`
+
 export default { 
     HomeContainer, 
     SplashImageContainer, 
@@ -161,5 +174,7 @@ export default {
     GenericFormContainer,
     TrashAndEditIconsContainer,
     ViewPicsContainer,
-    LogOutContainer
+    LogOutContainer,
+    PostBodyContainer,
+    PostTitleAndBodyContainer
  }

@@ -82,7 +82,7 @@ class NewPost extends Component {
     
                         <TextArea
                             type="string"
-                            name="description"
+                            name="content"
                             placeholder="Tell us about it"
                             onChange={this.handleInputChange} />
                    

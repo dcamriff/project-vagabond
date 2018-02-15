@@ -72,6 +72,7 @@ export const CityShowImage = styled.img`
 export const PostIcon = styled.img`
     width: 40px;
     height: 40px;
+    margin-right: 10px;
     
 `
 export const TrashIcon = styled.img`

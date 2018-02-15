@@ -21,7 +21,9 @@ export const Href = styled.div`
         color: #a1a9ab;
     }
 `
+export const PostTitle = styled.p`
+    font-weight: 600;
+`
 
 
-
-export default { CityInfo, Href, LoginText }
+export default { CityInfo, Href, LoginText, PostTitle }
