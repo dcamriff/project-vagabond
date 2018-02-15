@@ -15,6 +15,7 @@ class App extends Component {
   }
 
 
+
   async getCities() {
     try{
       const res = await axios.get('/api/cities')

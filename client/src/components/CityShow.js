@@ -46,7 +46,7 @@ class CityShow extends Component {
  
   async createPost(newPost){
       try{
-          const res = await axios.post(`/api/cities/${this.props.match.params.id}/posts`, newPost)
+          const res = await axios.post(`/api/cities/${this.props.match.params.id}/posts`)
           newPost = res.data
           const updatedPosts = [...this.state.posts]
           this.setState({posts: updatedPosts})
