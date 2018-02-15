@@ -120,7 +120,7 @@ class CityShow extends Component {
                     <CityShowImage src={this.state.city.picture} alt={this.state.city.name}/>
                 </CityImageCenteringContainer>
                 <CityInfoContainer>
-                    <CityInfo><h1>Hello From... </h1></CityInfo>
+                    <CityInfo><h1>Hello From... {this.state.city.name}.</h1></CityInfo>
                     <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) Post</FormButton></CityInfo>
                     <hr/>
                     <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} addNewPost={this.addNewPost}/>
