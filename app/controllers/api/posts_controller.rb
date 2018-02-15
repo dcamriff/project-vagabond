@@ -3,7 +3,8 @@ class Api::PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.order(created_at: :desc)
+    puts params
+    @posts =  City.find(params[:city_id]).posts.order(created_at: :desc)
 
     render json: @posts
   end

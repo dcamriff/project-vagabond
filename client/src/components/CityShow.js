@@ -87,13 +87,10 @@ class CityShow extends Component {
         .then((res) => {this.setState({city: res.data})})
     }
 
-    async deletePost(cityId, postId) {
-        try{
-            await axios.delete(`/api/cities/${cityId}/posts/${postId}`)
-        }
-        catch(err){
-            console.log(err)
-        }
+   deletePost(cityId, postId) {
+        axios.delete(`/api/cities/${cityId}/posts/${postId}`)
+        .then(this.getPosts)
+        .catch((error) => {console.log(error)}) 
     }
 
      
