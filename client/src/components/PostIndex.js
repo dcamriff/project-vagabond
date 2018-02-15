@@ -23,6 +23,7 @@ const PostIndex = (props) => {
             </div>
             </TrashAndEditIconsContainer>
             <p>{props.content}</p>
+            <hr/>
         </CityInfo>
         </div>
     )

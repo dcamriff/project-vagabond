@@ -59,9 +59,9 @@ export const SplashHeaderContainer = PhotoHeaderContainer.extend`
 
 export const CityInfoContainer = styled.div`
     width: 45vw;
-    background-color: #1b1b1b;
+    // background-color: #1b1b1b;
     @media only screen and (min-width: 900px){
-        margin-top: 30vh;
+        margin-top: 20vh;
     }
 
     @media only screen and (max-width: 900px){
@@ -84,7 +84,7 @@ export const CityImageCenteringContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20vh;
+    margin-top: 5vh;
     background-attachment: fixed;
 
     @media only screen and (min-width: 900px){

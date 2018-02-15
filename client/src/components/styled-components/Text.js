@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 export const CityInfo = styled.p `
     font-size: 14px;
-    color: white;
+    color: #1b1b1b;
     font-family: 'Helvetica';
 
     a {
         text-decoration: none;
-        color: white;
+        color: #1b1b1b;
     }  
 
 `

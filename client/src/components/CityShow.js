@@ -119,6 +119,7 @@ class CityShow extends Component {
                 <CityInfoContainer>
                     <CityInfo><h1>Hello From... </h1></CityInfo>
                     <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) post</FormButton></CityInfo>
+                    <hr/>
                     <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} addNewPost={this.addNewPost}/>
                     <PostList posts = {this.state.posts} deletePost = {this.deletePost}/>
                 </CityInfoContainer>

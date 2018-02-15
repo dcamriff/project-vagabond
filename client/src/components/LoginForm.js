@@ -18,7 +18,7 @@ class LoginForm extends Component {
     login : false
   }
 
-  handleInputChange = (event) => {
+  handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value})
     event.preventDefault()
   }
@@ -58,7 +58,7 @@ class LoginForm extends Component {
               type="text"
               placeholder="enter username"
               value={this.state.username}
-              onChange={this.handleInputChange}/>
+              onChange={this.handleChange}/>
             <br/>
             <div>
               <GlobalFormInputButton className="input-button" type="submit" value="login"/>
