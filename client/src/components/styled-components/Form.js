@@ -137,7 +137,7 @@ background-color: #1b1b1b;
 
 `
 
-export const UserFormBody = styled.form`
+export const UserFormBody = styled.div`
 /* display: flex;
 flex-direction: column;
 justify-content: center; */
