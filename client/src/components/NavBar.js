@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, NavItems } from './styled-components/NavStyle'
+import { Nav } from './styled-components/NavStyle'
 import { LogoImage } from './styled-components/Images'
 import { Link } from 'react-router-dom'
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import { GenericFormContainer } from './styled-components/Containers'
-import { InputAndButtonContainer, ButtonContainer, TextArea, FormWrapper, FormHeader, FormHeading, FormBody, FormField, FormInput, FormButton, FormInputButton} from './styled-components/Form'
+import { InputAndButtonContainer, ButtonContainer, TextArea, FormWrapper, FormBody, FormInput, FormButton, FormInputButton} from './styled-components/Form'
 class NewPost extends Component {
     constructor(props) {
         super(props)

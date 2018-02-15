@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ViewPicsContainer, NavDiv, CityContainer, CityInfoContainer, CityShowContainer, CityImageCenteringContainer } from './styled-components/Containers'
+import { ViewPicsContainer, NavDiv, CityInfoContainer, CityShowContainer, CityImageCenteringContainer } from './styled-components/Containers'
 import { CityShowImage, LogoImage } from './styled-components/Images'
 import { CityInfo, Href } from './styled-components/Text'
 import { FormButton } from './styled-components/Form'
