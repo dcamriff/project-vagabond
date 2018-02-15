@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ViewPicsContainer, NavDiv, CityInfoContainer, CityShowContainer, CityImageCenteringContainer } from './styled-components/Containers'
 import { CityShowImage, LogoImage } from './styled-components/Images'
-import { CityInfo, Href } from './styled-components/Text'
+import { CityInfo, Href, LoginText } from './styled-components/Text'
 import { FormButton } from './styled-components/Form'
 import NewPost from './NewPost'
 import PostList from './PostList'
@@ -127,8 +127,8 @@ class CityShow extends Component {
                     <CityShowImage src={this.state.city.picture} alt={this.state.city.name}/>
                 </CityImageCenteringContainer>
                 <CityInfoContainer>
-                    <CityInfo><h1>Hello From... </h1></CityInfo>
-                    <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) Post</FormButton></CityInfo>
+                    <CityInfo><h1>Hello From... {this.state.city.name}</h1></CityInfo>
+                   {localStorage.userId ? <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) Post</FormButton></CityInfo> : <LoginText>Login to Post about Your Experience!</LoginText>} 
                     <hr/>
                     <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} city_id ={this.props.match.params.id} 
                     getPosts = {this.getPosts}/>

@@ -41,7 +41,7 @@ class App extends Component {
   render() {
 
     const HomeComponent = () => (<Home cities={this.state.cities} />)
-    const CityShowComponent = (props) => (<CityShow city={this.state.city} {...props}  />)
+    const CityShowComponent = (props) => (<CityShow city={this.state.city} {...props} isLoggedIn = {this.state.isLoggedIn}  />)
     const NewPostComponent = ()=> (<NewPost />)
     const LoginFormComponent = () => (<LoginForm isLoggedIn = {this.isLoggedIn}/>)
     

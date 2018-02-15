@@ -12,6 +12,10 @@ export const CityInfo = styled.p `
 
 `
 
+export const LoginText = CityInfo.extend`
+    font-size: 2em;
+`
+
 export const Href = styled.div`
     a {
         color: #a1a9ab;
@@ -20,4 +24,4 @@ export const Href = styled.div`
 
 
 
-export default { CityInfo, Href }
+export default { CityInfo, Href, LoginText }
