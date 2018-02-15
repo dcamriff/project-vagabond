@@ -53,36 +53,14 @@ class CityShow extends Component {
     hidePostGallery = () => {
         this.setState({viewPostGallery: false})
     }
+
     getPosts = () => {
         axios.get(`/api/cities/${this.props.match.params.id}/posts`)
         .then((res) => {this.setState({posts: res.data})})
     }
     
- 
-  async createPost(newPost){
-      try{
-          const res = await axios.post(`/api/cities/${this.props.match.params.id}/posts`)
-          newPost = res.data
-          const updatedPosts = [...this.state.posts]
-          this.setState({posts: updatedPosts})
-      }
-      catch(err){
-          console.log(err)
-      }
-  }
-    addNewPost = async (newPost) => {
-        try{
-           await this.createPost(newPost)
-           const posts = [...this.state.posts]
-           posts.push(newPost)
-           this.setState({ posts })    
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
-
     getCityInfo = () => {
+        console.log(this.props.match.params.id)
         axios.get(`/api/cities/${this.props.match.params.id}`)
         .then((res) => {this.setState({city: res.data})})
     }
@@ -90,7 +68,7 @@ class CityShow extends Component {
    deletePost(cityId, postId) {
         axios.delete(`/api/cities/${cityId}/posts/${postId}`)
         .then(this.getPosts)
-        .catch((error) => {console.log(error)}) 
+        
     }
 
      
@@ -120,7 +98,7 @@ class CityShow extends Component {
                     <CityInfo><h1>Hello From... </h1></CityInfo>
                     <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) Post</FormButton></CityInfo>
                     <hr/>
-                    <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} addNewPost={this.addNewPost}/>
+                    <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} city_id ={this.props.match.params.id} />
                     <ViewPicsContainer>
                     <FormButton onClick={()=>this.viewPostGallery()}>City Pics</FormButton>
                     <FormButton onClick={()=>this.hidePostGallery()}>-</FormButton>

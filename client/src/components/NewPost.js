@@ -2,24 +2,26 @@ import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import { GenericFormContainer } from './styled-components/Containers'
 import { InputAndButtonContainer, ButtonContainer, TextArea, FormWrapper, FormHeader, FormHeading, FormBody, FormField, FormInput, FormButton, FormInputButton} from './styled-components/Form'
-class NewPost extends Component {
-    constructor(props) {
-        super(props)
+import axios from 'axios'
 
-        this.state = {
-            newPost: {}
+
+class NewPost extends Component {
+        
+    state = {
+            newPost: {
+                user_id : localStorage.userId,
+                city_id : this.props.city_id,
+            }, 
+            city_id : this.props.city_id,
         }
-    }
+    
 
     handleInputChange = (event) => {
         const attributeName = event.target.name
         let attributeValue = event.target.value
-        const newPost = {
-            ...this.state.newPost
-        }
+        const newPost = {...this.state.newPost}
         newPost[attributeName] = attributeValue
         this.setState({newPost})
-        console.log(this.state)
     }
 
     resetForm = () => {
@@ -27,13 +29,19 @@ class NewPost extends Component {
         this.setState({newPost, redirect: true})
     }
 
-    addNewPost = (event) => {
+    createPost(event){
+        
         event.preventDefault()
-        const newPost = {...this.state.newPost}
-        this.resetForm()
-        this.props.addNewPost(newPost)
-        console.log("HEYYY", this.state)
+        axios.post(`/api/cities/${this.state.city_id}/posts`, this.state.newPost)
+        .then((res) => { 
+            const newPost = res.data
+            const posts = [...this.state.posts]
+            posts.push(newPost)
+            this.setState({ posts })
+        })
+        .catch((error) => {console.log(error)}) 
     }
+
 
     showPostForm = () => {
         this.props.showPostForm()
@@ -41,11 +49,11 @@ class NewPost extends Component {
 
     render() {
         return (
-           
+        
             <div>
                 {this.props.showPostFormState ?  
                 <FormWrapper>
-                      <FormBody onSubmit={this.addNewPost}>
+                      <FormBody onSubmit={this.createPost.bind(this)}>
                     <InputAndButtonContainer>
                         <FormInput
                             type="string"

@@ -29,11 +29,9 @@ class LoginForm extends Component {
     axios.get(`/api/users/retrieve/${this.state.username}`)
       .then((res) => {
         if(res.data) {
-          localStorage.setItem("userId", res.data.id)
+          localStorage.setItem("userId", res.data[0].id)
           this.setState({login: true})
-        }
-        
-      
+        } 
       })
       .catch((error) => {console.log(error)})  
   }
@@ -41,7 +39,6 @@ class LoginForm extends Component {
   render() {
 
     if (this.state.login === true) {
-      console.log('homeeee')
       return (<Redirect to="/" />)   
     }
 
