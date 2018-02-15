@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavDiv, CityContainer, CityInfoContainer, CityShowContainer, CityImageCenteringContainer } from './styled-components/Containers'
+import { ViewPicsContainer, NavDiv, CityContainer, CityInfoContainer, CityShowContainer, CityImageCenteringContainer } from './styled-components/Containers'
 import { CityShowImage, LogoImage } from './styled-components/Images'
 import { CityInfo, Href } from './styled-components/Text'
 import { FormButton } from './styled-components/Form'
@@ -34,10 +34,25 @@ class CityShow extends Component {
             picture: "https://i.imgur.com/Iv70Ed1.png"
         }
         ],
-        showPostFormState: false
+        showPostFormState: false,
+        viewPostGallery: false
+    }
+    
+    showPostForm = ()=> {   
+        if (this.state.showPostFormState === false){
+            this.setState({showPostFormState: true})
+        } else{
+            this.setState({showPostFormState: false})
+        }
+        
     }
 
-
+    viewPostGallery = () => {
+        this.setState({viewPostGallery: true})
+    }
+    hidePostGallery = () => {
+        this.setState({viewPostGallery: false})
+    }
     getPosts = () => {
         axios.get(`/api/cities/${this.props.match.params.id}/posts`)
         .then((res) => {this.setState({posts: res.data})})
@@ -71,18 +86,6 @@ class CityShow extends Component {
         axios.get(`/api/cities/${this.props.match.params.id}`)
         .then((res) => {this.setState({city: res.data})})
     }
-
-    
-    showPostForm = ()=> {   
-        if (this.state.showPostFormState === false){
-            this.setState({showPostFormState: true})
-        } else{
-            this.setState({showPostFormState: false})
-        }
-        
-    }
-
-
 
     async deletePost(cityId, postId) {
         try{
@@ -118,10 +121,14 @@ class CityShow extends Component {
                 </CityImageCenteringContainer>
                 <CityInfoContainer>
                     <CityInfo><h1>Hello From... </h1></CityInfo>
-                    <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) post</FormButton></CityInfo>
+                    <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) Post</FormButton></CityInfo>
                     <hr/>
                     <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} addNewPost={this.addNewPost}/>
-                    <PostList posts = {this.state.posts} deletePost = {this.deletePost}/>
+                    <ViewPicsContainer>
+                    <FormButton onClick={()=>this.viewPostGallery()}>City Pics</FormButton>
+                    <FormButton onClick={()=>this.hidePostGallery()}>-</FormButton>
+                    </ViewPicsContainer>
+                    <PostList viewPostGallery={this.state.viewPostGallery} posts = {this.state.posts} deletePost = {this.deletePost}/>
                 </CityInfoContainer>
         </CityShowContainer>
     )

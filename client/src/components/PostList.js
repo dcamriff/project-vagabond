@@ -1,5 +1,6 @@
 import React from 'react'
 import PostIndex from './PostIndex'
+import PostGallery from './PostGallery'
 
 const PostList = (props) => {
 
@@ -17,10 +18,22 @@ const PostList = (props) => {
         />
         )
     })
-
+    const gallery = props.posts.map((post, index)=>{
+        return (
+        <PostGallery 
+        picture = {post.picture}
+        cityId = {post.city_id}
+        postId = {post.id}
+        key = {index} 
+        />
+        )
+    })
     return(
         <div>
-            {postList}
+            {props.viewPostGallery ? <div>{gallery}</div> : <div>{postList}</div>}
+            
+    
+            
         </div>
     )
 }

@@ -7,7 +7,7 @@ margin: 48px auto 0;
 width: 45vw;
 height: 20vh;
 font-family: Quicksand, arial, sans-serif;
-background-color: #1b1b1b;
+// background-color: #1b1b1b;
 box-shadow: 0 0 20px rgba(0, 0, 0, .05), 0 0px 40px rgba(0, 0, 0, .08);
 `
 
@@ -66,7 +66,7 @@ export const FormButton = styled.button`
 font-family: inherit;
 font-size: 24px;
 font-weight: 700;
-color: #fff;
+color: #1b1b1b;
 border: 0;
 background-color: rgba(0,0, 0,  0.01);
 cursor: pointer;
@@ -86,7 +86,7 @@ export const FormInputButton = styled.input`
 font-family: inherit;
 font-size: 20px;
 font-weight: 700;
-color: #fff;
+color: #1b1b1b;
 background-color: rgba(0,0, 0,  0.01);
 border: 0;
 cursor: pointer;
