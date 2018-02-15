@@ -28,19 +28,19 @@ export const CityImage = styled.img`
         height: 286.86px;
     
     }
-    @media all and (max-width: 1279px) and (min-width: 901px) {
+    /* @media all and (max-width: 1279px) and (min-width: 901px){
         width: 424.2px;
         height: 286.86px;
-    },
+    } */
     
     @media only screen and (max-width: 1280px){
-        width: 424.2px;
+        width: 385px;
         height: 286.86px;
     
     }
     
     @media only screen and (max-width: 900px){
-        width: 440px;
+        width: 424.2px;
         height: 286.86px;
     }
 

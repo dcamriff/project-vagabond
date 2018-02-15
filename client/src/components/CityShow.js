@@ -35,16 +35,23 @@ class CityShow extends Component {
         }
         ],
         showPostFormState: false,
+        showEditFormState: false,
         viewPostGallery: false
     }
     
+    showEditForm = ()=>{
+        if (this.state.showEditFormState === false){
+            this.setState({showEditFormState: true})
+        } else{
+            this.setState({showEditFormState: false})
+        }
+    }
     showPostForm = ()=> {   
         if (this.state.showPostFormState === false){
             this.setState({showPostFormState: true})
         } else{
             this.setState({showPostFormState: false})
-        }
-        
+        }  
     }
 
     viewPostGallery = () => {
@@ -129,7 +136,7 @@ class CityShow extends Component {
                     <FormButton onClick={()=>this.viewPostGallery()}>City Pics</FormButton>
                     <FormButton onClick={()=>this.hidePostGallery()}>-</FormButton>
                     </ViewPicsContainer>
-                    <PostList viewPostGallery={this.state.viewPostGallery} posts = {this.state.posts} deletePost = {this.deletePost}/>
+                    <PostList showEditFormState = {this.state.showEditFormState} showEditForm = {this.showEditForm} viewPostGallery={this.state.viewPostGallery} posts = {this.state.posts} deletePost = {this.deletePost}/>
                 </CityInfoContainer>
         </CityShowContainer>
     )
