@@ -3,7 +3,8 @@ class Api::PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.order(created_at: :desc)
+    puts params
+    @posts =  City.find(params[:city_id]).posts.order(created_at: :desc)
 
     render json: @posts
   end
@@ -18,7 +19,7 @@ class Api::PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      render :status => 200
+      render @post
     else
       puts "banana"
     end

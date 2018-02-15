@@ -10,10 +10,17 @@ import axios from 'axios'
 
 class App extends Component {
   state = {
-    cities: []
+    cities: [],
+    isLoggedIn: false
   }
 
-
+    isLoggedIn = () => {
+    if (this.state.isLoggedIn === false){
+      this.setState({isLoggedIn: true})
+    }else{
+      this.setState({isLoggedIn: false})
+    }
+  }
 
   async getCities() {
     try{
@@ -27,8 +34,6 @@ class App extends Component {
 
   }
 
-  
-
   componentWillMount() {
     this.getCities();
   }
@@ -38,16 +43,17 @@ class App extends Component {
     const HomeComponent = () => (<Home cities={this.state.cities} />)
     const CityShowComponent = (props) => (<CityShow city={this.state.city} {...props}  />)
     const NewPostComponent = ()=> (<NewPost />)
+    const LoginFormComponent = () => (<LoginForm isLoggedIn = {this.isLoggedIn}/>)
     
     return (
       <Router>
         <div>
-          <NavBar />
+          <NavBar isLoggedIn = {this.state.isLoggedIn}/>
           <Switch>
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/cities/:id" component={CityShowComponent} />
           <Route exact path="/cities/:city_id/posts/new" component={NewPostComponent} />
-          <Route exact path="/login" component={LoginForm} />
+          <Route exact path="/login" component={LoginFormComponent} />
           </Switch>
         </div>
       </Router>
