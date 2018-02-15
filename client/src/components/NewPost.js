@@ -31,8 +31,8 @@ class NewPost extends Component {
         event.preventDefault()
         const newPost = {...this.state.newPost}
         this.resetForm()
-        // this.props.addNewPost(newPost)
-        console.log(this.state)
+        this.props.addNewPost(newPost)
+        console.log("HEYYY", this.state)
     }
 
     showPostForm = () => {
@@ -70,15 +70,15 @@ class NewPost extends Component {
                   
                       
                         <FormInput
-                            type="text-area"
-                            name="img"
-                            placeholder="Image URL"
+                            type="string"
+                            name="tag"
+                            placeholder="hashtags?"
                             onChange={this.handleInputChange} />
                    
     
                         <TextArea
                             type="string"
-                            name="img"
+                            name="description"
                             placeholder="Tell us about it"
                             onChange={this.handleInputChange} />
                    
