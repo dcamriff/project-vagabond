@@ -42,7 +42,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <NavBar/>
+          <NavBar />
           <Switch>
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/cities/:id" component={CityShowComponent} />
