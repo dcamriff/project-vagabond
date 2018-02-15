@@ -37,20 +37,7 @@ class PostEdit extends Component {
         console.log(this.state)
     }
 
-    resetForm = () => {
-        const editPost = {
-            ...this.state.editPost
-        }
-        this.setState({editPost, redirect: true})
-    }
 
-    addNewPost = (event) => {
-        event.preventDefault()
-        const updatedPost = {...this.state.updatedPost}
-        this.resetForm()
-        // this.props.addNewPost(newPost)
-        console.log(this.state)
-    }
 
     showPostForm = () => {this.props.showPostForm()
     }
