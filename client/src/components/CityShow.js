@@ -100,7 +100,7 @@ class CityShow extends Component {
    deletePost(cityId, postId) {
         axios.delete(`/api/cities/${cityId}/posts/${postId}`)
         .then(this.getPosts)
-        
+        window.location.reload()
     }
 
      
