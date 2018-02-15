@@ -10,7 +10,7 @@ const NavBar = (props) => {
             {/* {this.props.isLoggedIn ?  */}
             <div>
             <a href="/">Logout</a>
-
+            
             </div> :
             <div>
                 <a href="#">Sign Up</a>

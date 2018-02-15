@@ -113,7 +113,7 @@ lisbon = City.create(
     name: "Lisbon", 
     description: "Charming, historic town on the coast of Portugal.", 
     country: "Portugal", 
-    picture: "http://www.telegraph.co.uk/content/dam/Travel/hotels/europe/portugal/porto/porto-portugal-small.jpg", 
+    picture: "https://i.imgur.com/YQBL96s.jpg", 
     population: 545000
     )
 saigon = City.create(
