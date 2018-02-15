@@ -29,7 +29,7 @@ export const SplashImageContainer = PhotoCenteringContainer.extend`
 `
 
 export const CityContainer = PhotoCenteringContainer.extend`
-    font-size: 5em;
+    font-size: 4.75em;
     color: white;
     border: solid 1px white;
     text-shadow: 1px 1px rgba(0,0,0, 0.50);   
@@ -135,7 +135,10 @@ a{
     text-shadow: 1px 1px rgba(0,0,0, 0.1);
 }
 `
-
+export const ViewPicsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
 export default { 
     HomeContainer, 
     SplashImageContainer, 
@@ -150,5 +153,6 @@ export default {
     CityImageCenteringContainer,
     PostHeaderContainer,
     GenericFormContainer,
-    TrashAndEditIconsContainer
+    TrashAndEditIconsContainer,
+    ViewPicsContainer
  }

@@ -7,6 +7,11 @@ export const CityImage = styled.img`
     width: 416px;
     height: 286.86px;
 
+    @media only screen and (min-width: 900px){
+        width: 385px;
+        height: 286.86px;
+    }
+
 `
 export const LogoImage = styled.img`
     margin: 15px 0 5px 15px;

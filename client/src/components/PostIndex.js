@@ -16,7 +16,7 @@ const PostIndex = (props) => {
             </PostHeaderContainer>
             <TrashAndEditIconsContainer>
 
-            <Link to="#"><p>{props.title}</p></Link>
+            <p>{props.title}</p>
             <div>
             <TrashIcon src="https://i.imgur.com/OMSX8Z5.png" onClick={() => { props.deletePost(props.cityId, props.postId) }} />
             <EditIcon src="https://i.imgur.com/L0xUMw1.png" onClick={() => { props.deletePost(props.cityId, props.postId) }} />

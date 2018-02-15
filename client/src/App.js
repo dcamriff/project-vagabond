@@ -9,7 +9,6 @@ import NewPost from './components/NewPost'
 import LoginForm from './components/LoginForm'
 import axios from 'axios'
 
-
 class App extends Component {
   state = {
     cities: []
