@@ -1,5 +1,5 @@
 import React from 'react'
-import { PhotoHeaderContainer, CityHeaderContainer, CityContainer } from './styled-components/Containers'
+import { CityHeaderContainer, CityContainer } from './styled-components/Containers'
 import { CityImage } from './styled-components/Images'
 
 const CityIndex = (props) => {
