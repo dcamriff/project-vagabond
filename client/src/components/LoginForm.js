@@ -6,8 +6,9 @@ import {
   UserFormHeader,
   UserFormBody,
   GlobalFormInputButton,
-  UserFormInput
-} from './styled-components/Form'
+  UserFormInput,
+  UserFormButton
+} from './styled-components/FormPage'
 
 
 
@@ -66,11 +67,11 @@ class LoginForm extends Component {
               type="text"
               placeholder="enter username"
               value={this.state.username}
-              onChange={this.handleInputChange}/>
+              onChange={this.handleChange}/>
             <br/>
-            <div>
+            <UserFormButton>
               <GlobalFormInputButton className="input-button" type="submit" value="login"/>
-            </div>
+            </UserFormButton>
           </form>
 
         </UserFormBody>
