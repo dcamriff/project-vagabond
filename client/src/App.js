@@ -16,6 +16,7 @@ class App extends Component {
   }
 
 
+
   async getCities() {
     try{
       const res = await axios.get('/api/cities')
@@ -43,7 +44,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <NavBar/>
+          <NavBar />
           <Switch>
           <Route exact path="/" component={HomeComponent} />
           <Route exact path="/cities/:id" component={CityShowComponent} />

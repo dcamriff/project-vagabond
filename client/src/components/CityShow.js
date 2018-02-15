@@ -42,11 +42,29 @@ class CityShow extends Component {
         axios.get(`/api/cities/${this.props.match.params.id}/posts`)
         .then((res) => {this.setState({posts: res.data})})
     }
-
-    addNewPost = (event, newPost) => {
-        event.preventDefault()
-        axios.post(`/api/cities/${this.props.match.params.id}/posts`, newPost)
-        .then(this.getPost())
+    
+ 
+  async createPost(newPost){
+      try{
+          const res = await axios.post(`/api/cities/${this.props.match.params.id}/posts`)
+          newPost = res.data
+          const updatedPosts = [...this.state.posts]
+          this.setState({posts: updatedPosts})
+      }
+      catch(err){
+          console.log(err)
+      }
+  }
+    addNewPost = async (newPost) => {
+        try{
+           await this.createPost(newPost)
+           const posts = [...this.state.posts]
+           posts.push(newPost)
+           this.setState({ posts })    
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 
     getCityInfo = () => {
@@ -92,7 +110,7 @@ class CityShow extends Component {
                 <CityInfoContainer>
                     <CityInfo><h1>Hello From... </h1></CityInfo>
                     <CityInfo><FormButton onClick= {() => this.showPostForm()}>(+) post</FormButton></CityInfo>
-                    <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} />
+                    <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} addNewPost={this.addNewPost}/>
                     <PostList posts = {this.state.posts} deletePost = {this.deletePost}/>
                 </CityInfoContainer>
         </CityShowContainer>
