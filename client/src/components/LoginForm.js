@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Redirect} from 'react-router-dom'
 import axios from 'axios'
 import {
   LoginWrapper,
@@ -13,54 +14,45 @@ import {
 
 class LoginForm extends Component {
   state = {
-    username: ""
+    username: "",
+    login : false
   }
 
-  getUser = (event) => {
-    event.preventDefault()
-    const loginUser = {
-      ...this.state.loginUser
-    }
-    console.log('Getting User for login')
-    this.resetForm()
-    this
-      .props
-      .getUser(loginUser)
-  }
-
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
+  handleInputChange = (event) => {
+    this.setState({[event.target.name]: event.target.value})
     event.preventDefault()
   }
 
   handleSubmit = (event) => {
-    axios
-      .post('/api/users', this.state)
+    event.preventDefault()
+    axios.get(`/api/users/retrieve/${this.state.username}`)
       .then((res) => {
-        this
-          .props
-          .updateState(res.data)
-        localStorage.setItem("userId", res.data._id)
-        this.setState(res.data)
+        if(res.data) {
+          localStorage.setItem("userId", res.data.id)
+          this.setState({login: true})
+        }
+        
+      
       })
-      .catch((error) => {
-        console.log(error)
-      })
-      event.preventDefault()
+      .catch((error) => {console.log(error)})  
   }
 
   render() {
 
+    if (this.state.login === true) {
+      console.log('homeeee')
+      return (<Redirect to="/" />)   
+    }
+
     return (
+
       <LoginWrapper>
         <UserFormBody>
           <UserFormHeader>
             Welcome to Vojaĝo
           </UserFormHeader>
 
-          <form onSubmit={this.getUser.username}>
+          <form onSubmit={this.handleSubmit}>
             <UserFormInput
               name="username"
               type="text"
