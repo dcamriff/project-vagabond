@@ -1,6 +1,6 @@
 # Voyaĝo
 
-**Use the App [here](LINK)**
+**Use the App [here](https://voyago.herokuapp.com/)**
 
 **App Developer**: 
 * [Diane Riffel](https://github.com/dcamriff)
