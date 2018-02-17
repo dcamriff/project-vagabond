@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { ViewPicsContainer, NavDiv, CityInfoContainer, CityShowContainer, CityImageCenteringContainer } from './styled-components/Containers'
 import { CityShowImage, LogoImage } from './styled-components/Images'
 import { CityInfo, Href, LoginText } from './styled-components/Text'
@@ -115,13 +116,12 @@ class CityShow extends Component {
     return (
         <CityShowContainer>
                 <NavDiv>
-                <a href="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></a>
+                <Link to="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></Link>
     
             
-            <Href>
-                <a href="#">Sign Up</a>
-                <a href="/login">Login</a>
-            </Href>
+                <Link to="/login">Sign Up</Link>
+                <Link to="/login">Login</Link>
+            
                 </NavDiv>
                 <CityImageCenteringContainer>
                     <CityShowImage src={this.state.city.picture} alt={this.state.city.name}/>

@@ -16,11 +16,6 @@ export const LoginText = CityInfo.extend`
     font-size: 2em;
 `
 
-export const Href = styled.div`
-    a {
-        color: #a1a9ab;
-    }
-`
 export const PostTitle = styled.p`
     font-weight: 600;
 `

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const NavBar = (props) => {
     return (
         <Nav>
-        <a href="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></a>
+        <Link to="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></Link>
             {props.isLoggedIn ? 
             <LogOutContainer>
                 <PostIcon src="https://i.imgur.com/kCMD9Tu.png"/>
@@ -16,8 +16,8 @@ const NavBar = (props) => {
             
             </LogOutContainer> :
             <div>
-                <a href="#">Sign Up</a>
-                <a href="/login">Login</a>
+                <Link to="/login">Sign Up</Link>
+                <Link to="/login">Login</Link>
             </div>}
         </Nav>
     )
