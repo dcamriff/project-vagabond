@@ -21,4 +21,4 @@ export const PostTitle = styled.p`
 `
 
 
-export default { CityInfo, Href, LoginText, PostTitle }
+export default { CityInfo, LoginText, PostTitle }
