@@ -10,7 +10,7 @@ export const CityImage = styled.img`
    
     
     @media only screen and (max-width: 1280px){
-        width: 425px;
+        width: 385px;
         height: 286.86px;
     
     }
