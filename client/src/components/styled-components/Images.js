@@ -44,6 +44,11 @@ export const CityImage = styled.img`
         height: 286.86px;
     
     }
+    @media only screen and (max-width: 1024px){
+        width: 385px;
+        height: 286.86px;
+    
+    }
     
     
     @media only screen and (max-width: 900px){
