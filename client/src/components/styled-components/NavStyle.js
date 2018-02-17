@@ -20,6 +20,16 @@ export const Nav = styled.div`
         margin-right: 20px;
         font-size: 1.25em;
         text-shadow: 1px 1px rgba(0,0,0, 0.1);
+        @media only screen and (max-width: 787px){
+            font-size: 1em
+        
+        }
+    
+        @media only screen and (max-width: 600px){
+            font-size: .75em
+        
+        }
+    
     }
 `
 export const NavItems = styled.div`

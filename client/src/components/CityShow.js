@@ -133,7 +133,7 @@ class CityShow extends Component {
                     <NewPost showPostFormState = {this.state.showPostFormState} showPostForm = {this.showPostForm} city_id ={this.props.match.params.id} 
                     getPosts = {this.getPosts}/>
                     <ViewPicsContainer>
-                    <FormButton onClick={()=>this.viewPostGallery()}>City Pics</FormButton>
+                    <FormButton onClick={()=>this.viewPostGallery()}>View City Pics</FormButton>
                     <FormButton onClick={()=>this.hidePostGallery()}>-</FormButton>
                     </ViewPicsContainer>
                     <PostList showEditFormState = {this.state.showEditFormState} showEditForm = {this.showEditForm} viewPostGallery={this.state.viewPostGallery} posts = {this.state.posts} deletePost = {this.deletePost}/>

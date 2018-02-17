@@ -26,6 +26,29 @@ export const SplashImageContainer = PhotoCenteringContainer.extend`
     font-family: 'Raleway', sans-serif;
     text-shadow: 1px 1px rgba(0,0,0, 0.50);  
 
+    @media only screen and (max-width: 787px){
+        font-size: 5em
+    
+    }
+
+    @media only screen and (max-width: 600px){
+        font-size: 3em
+    
+    }
+
+    @media only screen and (max-width: 400px){
+        font-size: 2em
+    
+    }
+
+    @media only screen and (max-width: 350px){
+        font-size: 1.5em
+    
+    }
+    @media only screen and (max-width: 300px){
+        font-size: 1em
+    
+    }
 `
 
 export const CityContainer = PhotoCenteringContainer.extend`
@@ -33,6 +56,15 @@ export const CityContainer = PhotoCenteringContainer.extend`
     color: white;
     border: solid 1px white;
     text-shadow: 1px 1px rgba(0,0,0, 0.50);   
+    @media only screen and (max-width: 787px){
+        font-size: 3em
+    
+    }
+
+    @media only screen and (max-width: 600px){
+        font-size: 2.5em
+    
+    }
 `
 
 export const TaglineContainer = styled.div`
@@ -42,6 +74,16 @@ export const TaglineContainer = styled.div`
     font-size: 3em;
     height: 30vh;
     color: white;
+    @media only screen and (max-width: 787px){
+        font-size: 2.5em
+    
+    }
+
+    @media only screen and (max-width: 600px){
+        font-size: 1.75em
+    
+    }
+
 `
 
 export const CityHeaderContainer = PhotoHeaderContainer.extend`
