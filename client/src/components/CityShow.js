@@ -4,6 +4,7 @@ import { ViewPicsContainer, NavDiv, CityInfoContainer, CityShowContainer, CityIm
 import { CityShowImage, LogoImage } from './styled-components/Images'
 import { CityInfo, Href, LoginText } from './styled-components/Text'
 import { FormButton } from './styled-components/Form'
+import ShowNavBar from './ShowNavBar'
 import NewPost from './NewPost'
 import PostList from './PostList'
 import axios from 'axios'
@@ -112,15 +113,10 @@ class CityShow extends Component {
     }
     render(){
     return (
+       
         <CityShowContainer>
-                <NavDiv>
-                <Link to="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></Link>
-    
-            
-                <Link to="/login">Sign Up</Link>
-                <Link to="/login">Login</Link>
-            
-                </NavDiv>
+
+           <ShowNavBar />
                 <CityImageCenteringContainer>
                     <CityShowImage src={this.state.city.picture} alt={this.state.city.name}/>
                 </CityImageCenteringContainer>

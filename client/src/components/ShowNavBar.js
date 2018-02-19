@@ -1,13 +1,13 @@
 import React from 'react'
 import { Nav, NavItems } from './styled-components/NavStyle'
-import { LogOutContainer } from './styled-components/Containers'
+import { LogOutContainer, NavDiv } from './styled-components/Containers'
 import { LogoImage, PostIcon } from './styled-components/Images'
 import { LogOutButton } from './styled-components/Form'
 import { Link } from 'react-router-dom'
 
-const NavBar = (props) => {
+const ShowNavBar = (props) => {
     return (
-        <Nav>
+        <NavDiv>
         <Link to="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></Link>
             {localStorage.userId ? 
             <LogOutContainer>
@@ -19,8 +19,8 @@ const NavBar = (props) => {
                 <Link to="/login">Sign Up</Link>
                 <Link to="/login">Login</Link>
             </div>}
-        </Nav>
+        </NavDiv>
     )
 }
 
-export default NavBar
+export default ShowNavBar

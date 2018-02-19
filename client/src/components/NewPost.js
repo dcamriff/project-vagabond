@@ -12,7 +12,7 @@ class NewPost extends Component {
                 user_id : localStorage.userId,
                 city_id : this.props.city_id,
             }, 
-            city_id : this.props.city_id,
+            city_id : this.props.city_id
         }
     
 
@@ -67,7 +67,6 @@ class NewPost extends Component {
                         <FormInput
                             type="string"
                             name="picture"
-                            value="https://images.unsplash.com/photo-1454473332662-09275b52e5a1?ixlib=rb-0.3.5&s=c2ec918ca71006a0b0c5ab301ad885a1&auto=format&fit=crop&w=2550&q=80"
                             placeholder="Add a picture!"
                             onChange={this.handleInputChange} />
                    
