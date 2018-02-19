@@ -30,7 +30,7 @@ class NewPost extends Component {
     }
 
     createPost(event){
-        console.log(this.state.newPost)
+        this.props.showPostForm()
         event.preventDefault()
         axios.post(`/api/cities/${this.state.city_id}/posts`, this.state.newPost)
         .then((res) => { this.props.getPosts()})

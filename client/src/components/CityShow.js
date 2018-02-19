@@ -85,7 +85,6 @@ class CityShow extends Component {
            const posts = [...this.state.posts]
            posts.push(newPost)
            this.setState({ posts })   
-           this.showPostForm() 
         }
         catch(err){
             console.log(err)
@@ -93,7 +92,6 @@ class CityShow extends Component {
     }
 
     getCityInfo = () => {
-        console.log(this.props.match.params.id)
         axios.get(`/api/cities/${this.props.match.params.id}`)
         .then((res) => {this.setState({city: res.data})})
     }
