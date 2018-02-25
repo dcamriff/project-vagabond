@@ -1,4 +1,4 @@
-# Voyaĝo
+# Vojaĝo
 
 **Use the App [here](https://voyago.herokuapp.com/)**
 
@@ -10,7 +10,7 @@
 
 **App Overview**
 
-Voyago is an application that bridges the gap between social media and travel platforms. In this modern zeitgeist of fast, concise information, Voyago allows talk of travel without talk of stress. I go. You go. Voyaĝo. Vivo estas voyago. 
+Vojago is an application that bridges the gap between social media and travel platforms. In this modern zeitgeist of fast, concise information, Vojago allows talk of travel without talk of stress. I go. You go. Vojaĝo. Vivo estas vojago. 
 
 Life is a journey. 
 
